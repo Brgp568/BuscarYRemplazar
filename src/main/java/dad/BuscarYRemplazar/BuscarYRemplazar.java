@@ -1,3 +1,5 @@
+package dad.BuscarYRemplazar;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -33,15 +35,12 @@ public class BuscarYRemplazar extends Application {
 		segundoG.add(tercero, 0, 1);
 		segundoG.add(cuarto, 1, 1);
 
-		ColumnConstraints [] colsbotones = {
-	            new ColumnConstraints(),
-	            new ColumnConstraints(),
-	        };
-	        segundoG.getColumnConstraints().setAll(colsbotones);
+		ColumnConstraints[] colsbotones = { new ColumnConstraints(), new ColumnConstraints(), };
+		segundoG.getColumnConstraints().setAll(colsbotones);
 
-	        colsbotones[0].setHgrow(Priority.ALWAYS);
-	        colsbotones[1].setHgrow(Priority.ALWAYS);
-		
+		colsbotones[0].setHgrow(Priority.ALWAYS);
+		colsbotones[1].setHgrow(Priority.ALWAYS);
+
 		Label Buscar = new Label("Buscar:");
 		TextField primerT = new TextField();
 
@@ -56,16 +55,12 @@ public class BuscarYRemplazar extends Application {
 		primerG.add(segundoT, 1, 1);
 		primerG.add(segundoG, 1, 2);
 
-		ColumnConstraints [] cols = {
-	            new ColumnConstraints(),
-	            new ColumnConstraints(),
-	        };
-	        primerG.getColumnConstraints().setAll(cols);
+		ColumnConstraints[] cols = { new ColumnConstraints(), new ColumnConstraints(), };
+		primerG.getColumnConstraints().setAll(cols);
 
-	        cols[1].setHgrow(Priority.ALWAYS);
-	        cols[1].setFillWidth(true);
+		cols[1].setHgrow(Priority.ALWAYS);
+		cols[1].setFillWidth(true);
 
-		
 		Button buscar = new Button("Buscar");
 		buscar.setMinWidth(150);
 		buscar.setMaxWidth(150);
@@ -83,7 +78,7 @@ public class BuscarYRemplazar extends Application {
 		ayuda.setMaxWidth(150);
 
 		VBox segundoV = new VBox(5, buscar, remplaza, remplazarT, cerrar, ayuda);
-	
+
 		HBox root = new HBox(5, primerG, segundoV);
 		HBox.setHgrow(primerG, Priority.ALWAYS);
 		Scene scene = new Scene(root, 320, 200);
